@@ -1,0 +1,118 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+  }
+
+  .container form{
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .container img{
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+
+/* هنا سنعدل على صندوق النصوص وحجمه وكيف يتم تكبيره وتصغيره مثلا عموديا وحجم الخط وغيره */
+  .text-area {
+    width: 100%;
+    max-width: 700px;
+    height: 300px;
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    resize: vertical;
+    margin-bottom: 10px;
+    font-size: 16px;
+    line-height: 1.5;
+    box-shadow: 2px 2px 50px rgba(0, 0, 0, 0.3);
+    outline-color: #7d4caf;
+  }
+
+
+  #btn{
+    background-color: #7d4caf;
+    color: #f2f2f2;
+    border: none;
+    border-radius: 9px;
+    padding: 10px 20px;
+    font-size: 25px;
+    cursor: pointer;
+    font-weight: 500;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+  }
+
+  #btn:hover{
+    background-color: #5e3982;
+    transition: 0.3s ease-in-out;;
+  }
+
+  #show-button{
+    background-color: #7d4caf;
+    color: #f2f2f2;
+    border: none;
+    border-radius: 9px;
+    padding: 10px 20px;
+    font-size: 25px;
+    cursor: pointer;
+    font-weight: 500;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+  }
+
+  #show-button:hover{
+    background-color: #5e3982;
+    transition: 0.3s ease-in-out;;
+  }
+
+  #photo{
+    outline-color: #7d4caf;
+  }
+.btn-container{
+  margin-top: 15px;
+  padding-top: 15px;
+ 
+}
+  #bgcol{
+    position: static;
+    bottom: 250px;
+    margin-left: 3px;
+    border-radius: 9px;
+    height: 40px;
+    width: 80px;
+    border-width: 2px;
+    border-color: #5e3982;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 3px;
+
+  }
+
+  /* Media queries for smaller screens */
+  @media only screen and (max-width: 600px) {
+    .container {
+      padding: 10px;
+    }
+    .text-area {
+      height: 150px;
+    }
+    #bgcol{
+      margin-top: 10px;
+    }
+  }
