@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=7">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('.static', filename='css/style.css') }}">
+  <title>Cloudy Words</title>
+</head>
+<body onload="clearTextArea()">
+  <div class="container">
+    <form action="/" method="post" id="forma">
+        <textarea name="textbox" id="myTextArea" class="text-area" placeholder="Enter your text here"></textarea>
+        <div class="btn-container">
+           <input id="btn" value="Submit" type="submit" name="sender">
+           <input id="show-button" value="Show" type="button" name="show">
+           <a download href="../static/outputs/output.png"><input id="btn" value="download" type="button" name="download"></a>
+           
+          <select name="bgcolorSelector" id="bgcol" onchange="bgchange()">
+            
+            <option value="000000">
+              black
+            </option>
+
+            <option value="Be2535">
+              red
+            </option>
+
+
+            <option value="Ffffff">
+              white
+            </option>
+
+            <option value="2596be">
+              blue
+            </option>
+
+            <option value="Be8625">
+              orange
+            </option>
+
+            <option value="25be25">
+              green
+            </option>
+
+            <option value="7d4caf">
+              purple
+            </option>
+
+          </select>
+
+          </div>
+    </form>
+    <!-- <p>{{ text }}</p> -->
+    <img id="photo" src="">
+  </div>
+</body>
+
+<script>
+    var show = function(event) {
+        var img = document.getElementById("photo");
+        img.src = "../static/outputs/output.png";
+    };
+
+    var showBtn = document.getElementById("show-button");
+    showBtn.onclick = show;
+
+    function clearTextArea() {
+  document.getElementById("myTextArea").value = "";
+  };
+
+  
+  function bgchange(){
+    var color = document.getElementById("bgcol");
+    let val = color.value;
+    if (val == "Ffffff"){
+      color.style.backgroundColor = "#Ffffff";
+      color.style.color="black";
+    }
+    else if (val == "2596be"){
+      color.style.backgroundColor = "#2596be";
+      color.style.color="white";
+    }
+
+    else if (val == "000000"){
+      color.style.backgroundColor = "#000000";
+      color.style.color="white";
+    }
+
+    else if (val == "Be2535"){
+      color.style.backgroundColor = "#Be2535";
+      color.style.color="white";
+    }
+
+    else if (val == "Be8625"){
+      color.style.backgroundColor = "#Be8625";
+      color.style.color="white";
+    }
+
+    else if (val == "25be25"){
+      color.style.backgroundColor = "#25be25";
+      color.style.color="white";
+    }
+
+    else if (val == "7d4caf"){
+      color.style.backgroundColor = "#7d4caf";
+      color.style.color="white";
+    }
+  }
+
+</script>
+</html>
